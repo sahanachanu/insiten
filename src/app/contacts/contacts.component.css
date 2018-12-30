@@ -1,0 +1,84 @@
+.table-contain {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 96%;
+    color:black;
+    margin-left: 0px;
+    margin-top:12px;
+  }
+  
+  .table-head{
+      font-size:16px;
+      font-weight:bold;
+  }
+
+  .table-body{
+      font-size:13px;
+  }
+  td, th {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .ContactsContainer{
+      margin-left:16px;
+  }
+  .BlockTitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:15px;
+  }
+
+  .ContactNameAdd{
+      margin-right:10px;
+      border:0.5px solid black;
+      width:125px;
+  }
+
+  .ContactsEdit{
+      margin-top:10px;
+  }
+
+  .ContactNumberAdd{
+    margin-right:10px;
+    border:0.5px solid black;
+    width:125px;
+}
+
+#XDelete{
+    width:10px;
+    height:10px;
+}
+
+#AddContactBtn{
+    width:50px;
+}
+
+@media (min-width: 1200px) {
+
+    .table-contain {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 80%;
+        color:black;
+        margin-left: 0px;
+        margin-top:12px;
+      }
+
+      .ContactNameAdd{
+        margin-right:10px;
+        border:0.5px solid black;
+        width:26%;
+    }
+  
+    .ContactNumberAdd{
+      margin-right:10px;
+      border:0.5px solid black;
+      width:26%;
+  }
+}

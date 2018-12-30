@@ -1,0 +1,209 @@
+
+<div class="col-md-8" id="DetailsContainerColumn" >
+    
+        <div cass="row">
+            <div class="col-md-12" id="CompanyNameDetails">
+                    <h1 class="CompanyNameDetails">{{ldata.name}}</h1>
+            </div>
+            
+        </div>
+        <div class="InfoDisplayContainer">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="DetailsContainerDiv" >
+                            <div class="FirstRow" *ngIf='nonEdit'>
+                                    <div class="StatusDiv"><span id="StatusLabel">Status:</span><span id="StatusValue">{{ldata.status}}</span></div>
+                                    <button class="btn btn-group" id="EditBtn" (click)='ShowEditForm();'>Edit</button>
+                            </div>
+
+                            <div class="FirstRowEdit" *ngIf='edit'>
+                                    <div class="StatusDivEdit">
+                                        <label id="StatusLabelEdit">Status:</label>
+                                        <select id="StatusValueEdit" id="status" value="{{ldata.status}}"><option *ngFor="let st of status">{{st}}</option></select>
+                                    </div>
+                                    <button class="btn btn-group" id="SaveBtn" (click)="SaveChanges();">Save</button>
+                                    <button class="btn btn-group" id="CancelBtn" (click)='CancelEdit();'>Cancel</button>
+                            </div>
+
+                                <div class="GeneralInfo" *ngIf='nonEdit' id="GeneralInfo">
+                                        
+                                <div class="DataBlock">
+                                    <div class="InfoLabel">Description:</div>
+                                    <div class="InfoData">{{ ldata.description }}</div>
+                                </div>
+
+                                <div class="DataBlock">
+                                    <div class="InfoLabel">Address Line:</div>
+                                    <div class="InfoData">{{ ldata.address1 }}</div>
+                                </div>
+                                <div class="DataBlock" *ngIf="address2">
+                                    <div class="InfoLabel">Address Line 2:</div>
+                                    <div class="InfoData">{{ ldata.address2 }}</div>
+                                </div>
+                                <div class="DataBlock">
+                                    <div class="InfoLabel">City:</div>
+                                    <div class="InfoData">{{ ldata.city }}</div>
+                                </div>
+                                <div class="DataBlock">
+                                    <div class="InfoLabel">State:</div>
+                                    <div class="InfoData">{{ ldata.state }}</div>
+                                </div>
+
+                                <div class="DataBlock">
+                                    <div class="InfoLabel">Zip Code:</div>
+                                    <div class="InfoData">{{ ldata.zip }}</div>
+                                </div>
+                                
+                                <div class="FinancialInfoContainer">
+                                        <div><span class="BlockTitle">Financial Performance</span>
+                                                <a href="../../../InsitenFiles/{{ ldata.file }}" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a>
+                                        </div>
+                                        
+
+                                        <div class="DataBlock">
+                                                <div class="InfoLabel">Date of Offer:</div>
+                                                <div class="InfoData">{{ ldata.DateOfOffer }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Date of Closure:</div>
+                                                <div class="InfoData">{{ ldata.DateOfClosure }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Shares:</div>
+                                                <div class="InfoData">{{ ldata.Shares }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Price:</div>
+                                                <div class="InfoData">{{ ldata.Price }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Percentage Stake Acquired:</div>
+                                                <div class="InfoData">{{ ldata.Stake }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Percentage Stake after Acquisition:</div>
+                                                <div class="InfoData">{{ ldata.StakeAfter }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Market Price</div>
+                                                <div class="InfoData">{{ ldata.MarketPrice }}</div>
+                                            </div>
+            
+                                            <div class="DataBlock">
+                                                <div class="InfoLabel">Aquisition Premium</div>
+                                                <div class="InfoData">{{ ldata.AcqPremium }}</div>
+                                            </div>
+                                    </div>
+                                
+                            </div>
+
+                            <div class="GeneralInfoEdit" *ngIf='edit' id="GeneralInfoEdit">
+                                    <div class="DataBlock">
+                                            <label class="InfoLabelE">Description:</label>
+                                            <input class="InfoDataE"  type='text' value="{{ldata.description}}">
+                                        </div>
+                                            <div class="DataBlock">
+                                                <label class="InfoLabelE">Address Line:</label>
+                                                <input class="InfoDataE"  id="address1" #address1 type='text' value="{{ldata.address1}}">
+                                            </div>
+                                            <div class="DataBlock" *ngIf="address2">
+                                                <label class="InfoLabelE" >Address Line 2:</label>
+                                                <input class="InfoDataE"  id="address2" type='text' value="{{ldata.address2}}">
+                                            </div>
+                                            <div class="DataBlock">
+                                                <label class="InfoLabelE">City:</label>
+                                                <input class="InfoDataE" id="city" type='text' value="{{ldata.city}}">
+                                            </div>
+                                            <div class="DataBlock">
+                                                <label class="InfoLabelE">State:</label>
+                                                <input class="InfoDataE" id="state" type='text' value="{{ldata.state}}" >
+                                            </div>
+
+                                            <div class="DataBlock">
+                                                    <label class="InfoLabelE">Zip Code:</label>
+                                                    <input class="InfoDataE"  type='text' value="{{ldata.zip}}">
+                                                </div>
+                                            <div class="FinancialInfoContainer">
+                                                    <div><span class="BlockTitle">Financial Performance</span>
+                                                            <a href="#" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a>
+                                            <div class="DataBlock">
+                                                    <label class="InfoLabel">Date of Offer: </label>
+                                                    <input class="InfoDataE" type='date' value="{{ ldata.DateOfOffer }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Date of Closure: </label>
+                                                    <input class="InfoDataE" type='date' value="{{ ldata.DateOfClosure }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Shares: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.Shares }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Price: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.Price }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Percentage Stake Acquired: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.Stake }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Percentage Stake after Acquisition: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.StakeAfter }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Market Price: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.MarketPrice }}">
+                                                </div>
+                
+                                                <div class="DataBlock">
+                                                    <label class="InfoLabel">Aquisition Premium: </label>
+                                                    <input class="InfoDataE" type='text' value="{{ ldata.AcqPremium }}">
+                                                </div>
+                                            </div>
+                            </div>
+                            </div>
+                            
+                            <app-contacts></app-contacts>
+                            <div class="ActionContainer">
+                                    <div class="ArchiveCompContainer">
+                                            <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label id="archiveInfo" class="form-check-label">
+                                                      I want to archive {{ldata.name}} information
+                                                    </label>
+                                                  </div>
+                                                  <button class="btn btn-primary" (click)="ArchiveComp(ldata)" id="ArchBtn">Archive Company</button>
+                                    </div>
+
+                                <div class="DeleteCompContainer">
+                                        <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" (change)="changeEvent($event)">
+                                                <label id="delInfo" class="form-check-label">
+                                                  I agree to delete {{ldata.name}} information permanently
+                                                </label>
+                                        </div>
+                                        <button class="btn btn-primary" [disabled] = "deleteVal" (click)="DeleteComp(ldata)" id="DelBtn">Delete Company</button>
+                                </div>     
+                            </div>
+                            
+                        </div>
+                    </div>
+        </div>
+        
+</div>
+</div>
+
+
+

@@ -1,0 +1,35 @@
+<div class="col-md-12" id="StatContainerColumn" >
+    
+        <div cass="row">
+            <div class="col-md-12" id="PageTitleDiv">
+                    <h1 class="PageTitle">Archived Companies</h1>
+            </div>
+            
+        </div>
+        <div class="InfoDisplayContainer">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="DetailsContainerDiv" >
+                                    <div class="ArchiveTableContainer">
+                                            <table class="table-contain">
+                                                <thead class="table-head">
+                                                    <tr>
+                                                    <th>Company</th>
+                                                    <th>Download</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-body">
+                                                    <tr *ngFor = "let comp of companies">
+                                                        <td>{{comp}}</td>
+                                                        <td><a href="#" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+    
+    

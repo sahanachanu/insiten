@@ -1,0 +1,250 @@
+.col-md-8{
+    -webkit-box-shadow: 0 10px 6px -6px #ccc;
+    -moz-box-shadow: 0 10px 6px -6px #ccc;
+    box-shadow: 0 5px 100px -6px #ccc;
+    height:76vh;
+    margin-top:18px;
+    margin-bottom:18px;
+    border: 1px solid #ddd;
+}
+
+#DetailsContainerColumn{
+    overflow-y:scroll;
+}
+
+.DetailsContainerDiv{
+    background-color: #eeeeeead;
+    width: 100%;
+}
+
+.BlockTitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:15px;
+  }
+.CompanyNameDetails{
+    width:100%;
+    text-align:center;
+    height: 30px;
+}
+
+.FirstRow{
+    margin-top:7px;
+}
+
+.FirstRowEdit{
+    margin-top:7px;
+}
+#EditBtn{
+    float:right;
+    margin-right: 10px;
+    width: 25%;
+    background-color: #74a6d1;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top:15px;
+}
+
+.StatusDiv{
+    border: 1px solid black;
+    margin-left: 16px;
+    width: 53%;
+    margin-top: 15px;
+    display: inline-flex;
+    height: 33px;
+}
+
+.StatusDivEdit{
+    margin-left: 16px;
+    width: 55%;
+    margin-top: 15px;
+    display: inline-flex
+}
+
+#StatusLabel{
+    font-size: 16px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+#StatusValue{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-top: 6px;
+}
+#StatusLabelEdit{
+    width: 115px;
+}
+#StatusValueEdit{
+    font-weight: bold;
+    float: left;
+    
+}
+
+
+.HorizontalLine{
+    width:80%;
+    border:1px solid black;
+}
+
+.GeneralInfo{
+    margin-left:16px;
+    margin-top:15px;
+    width:95%;
+}
+
+.Datablock{
+    margin-bottom:10px;
+}
+.GeneralInfoEdit{
+    margin-left:16px;
+    margin-top:25px;
+    
+}
+.InfoLabel{
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.InfoData{
+    display: inline-flex;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.InfoLabelE{
+    width: 100px;
+}
+.InfoLabelDataE {
+  float: left;
+  margin-left:50px;
+}
+
+#SaveBtn{
+    float:right;
+    margin-right: 5px;
+    width: 16%;
+    background-color: #74a6d1;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top:15px;
+}
+
+#CancelBtn{
+    float:right;
+    margin-right: 5px;
+    width: 18%;
+    background-color: #74a6d1;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top:15px;
+}
+
+
+#delInfo{
+    margin-left: 10px;
+    font-size:12px;
+}
+
+#archiveInfo{
+    margin-left: 10px;
+    font-size:12px;
+}
+.ActionContainer{
+    margin-left:16px;
+    margin-top:35px;
+}
+
+.ArchiveCompContainer{
+    margin-bottom:20px;
+}
+
+#ArchBtn{
+    margin-left:22px;
+}
+
+#DelBtn{
+    margin-left:22px;
+}
+
+.FinancialInfoContainer{
+    margin-top:13px;
+}
+
+@media (min-width: 1200px) {
+.DetailsContainerDiv{
+    background-color: #eeeeeead;
+    width: 96%;
+    margin-left: 20px;
+}
+
+.StatusDiv{
+    border: 1px solid black;
+    margin-left: 16px;
+    width: 30%;
+    margin-top: 15px;
+    display:inline-flex;
+}
+
+.StatusDivEdit{
+    margin-left: 16px;
+    width: 39%;
+    margin-top: 15px;
+    display:inline-flex;
+}
+
+#StatusLabel{
+    font-size: 18px;
+}
+#StatusValue{
+    font-size: 17px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;  
+}
+#StatusLabelEdit{
+    font-size: 18px;
+    width: 36%;
+}
+#StatusValueEdit{
+    font-size: 17px;
+    font-weight: bold;
+    float: left;
+    
+}
+
+#EditBtn{
+    float:right;
+    margin-right: 12px;
+    width: 14%;
+    background-color: #74a6d1;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top:15px;
+}
+
+#ArchBtn{
+    margin-left:0px;
+}
+
+#DelBtn{
+    margin-left:0px;
+}
+
+#delInfo{
+    margin-left: 10px;
+    font-size:16px;
+}
+
+#archiveInfo{
+    margin-left: 10px;
+    font-size:16px;
+}
+}

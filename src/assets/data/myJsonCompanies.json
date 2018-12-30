@@ -1,0 +1,74 @@
+[ {
+    "id": 1,
+    "name" : "Company1",
+    "description" : "This is sample data",
+    "address1":"3025 white ash trail",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Researching"
+  }, 
+  {
+    "id": 2,
+    "name" : "Company2",
+    "description" : "This is sample data",
+    "address1":"arden villas",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Pending approval"
+  },
+  {
+    "id": 3,
+    "name" : "TestCompany1",
+    "description" : "This is sample data",
+    "address1":"3025 white ash trail",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Approved"
+  },
+  {
+    "id": 4,
+    "name" : "Company4",
+    "description" : "This is sample data",
+    "address1":"3025 white ash trail",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Researching"
+  },
+  {
+    "id": 5,
+    "name" : "Company5",
+    "description" : "This is sample data",
+    "address1":"3025 white ash trail",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Pending approval"
+  },
+  {
+    "id": 6,
+    "name" : "TestCompany2",
+    "description" : "This is sample data",
+    "address1":"3025 white ash trail",
+    "address2":"",
+    "city":"orlando",
+    "state":"FL",
+    "email":"test@test.com",
+    "phone":"4077473549",
+    "status":"Declined"
+  }
+
+]

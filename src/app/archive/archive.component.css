@@ -1,0 +1,52 @@
+#StatContainerColumn{
+    -webkit-box-shadow: 0 10px 6px -6px #ccc;
+    -moz-box-shadow: 0 10px 6px -6px #ccc;
+    box-shadow: 0 5px 100px -6px #ccc;
+    height:76vh;
+    margin-top:18px;
+    margin-bottom:18px;
+    border: 1px solid #ddd;
+    overflow-y:auto;
+}
+
+
+.DetailsContainerDiv{
+    background-color: #eeeeeead;
+    width: 100%;
+    margin-top:10px;
+}
+
+
+.PageTitle{
+    width:100%;
+    text-align:center;
+    height: 30px;
+    font-size:30px;
+}
+
+.table-contain {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    color:black;
+    margin:0 auto;
+    display:blcok;
+  }
+  
+  .table-head{
+      font-size:16px;
+      font-weight:bold;
+  }
+
+  .table-body{
+      font-size:13px;
+  }
+  td, th {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

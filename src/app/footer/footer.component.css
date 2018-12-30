@@ -1,0 +1,18 @@
+.page-footer{
+    background-color: #333 !important;
+    border-color: #e7e7e7;
+    height: 9vh;
+    width: 91%;
+    margin: 0 auto;
+    color:white;
+}
+
+.Logo{
+    width: 64px;
+    height: 46px;
+    margin-top: 5px;
+}
+
+.CopyRight{
+    text-align: -webkit-center;
+}

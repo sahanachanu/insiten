@@ -1,0 +1,165 @@
+.col-md-4{
+    -webkit-box-shadow: 0 10px 6px -6px #ccc;
+    -moz-box-shadow: 0 10px 6px -6px #ccc;
+    box-shadow: 0 5px 100px -6px #ccc;
+    height:76vh;
+    margin-top:18px;
+    margin-bottom:18px;
+    border: 1px solid #ddd;
+}
+
+  .ListViewContainer{
+    margin-top: -3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 64vh;
+  }
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #74a6d1;
+    border: 1px solid #ddd;
+}
+
+  .listItem{
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        background-color: #74a6d1;
+    
+  }
+
+  .col-sm-offset-3{
+    margin-left: 6%;
+    margin-top: -58px;
+    margin-bottom: 10px;
+  }
+
+  .col-sm-6 {
+    width: 88%;
+}
+  #imaginary_container{
+    margin-top: 24px;
+    width: 76%;
+    margin-left: 30%;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+#CompanyNameList{
+    color: #080808;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#CreateNewBtn{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #74a6d1;
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.FirstRowList{
+    display:inline-flex;
+}
+
+.form-group{
+    margin-left: 0px;
+    height: 31px;
+}
+
+#searchBox{
+    width: 100% !important;
+    margin-left: 30px;
+    margin-top: 11px;
+}
+.input-group-addon {
+    border: 1px solid #080808 !important;
+}
+
+.stylish-input-group[_ngcontent-c2] .form-control[_ngcontent-c2] {
+    border-color: #080808 !important;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  @media (min-width: 992px) {
+  #searchBox{
+    width: 90% !important;
+    margin-left: 22px;
+    margin-top: 11px;
+  }
+}
+@media (min-width: 1200px) {
+
+    .ListViewContainer{
+        margin-top:0px;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        height:55vh;
+    }
+
+    .CreateBtnDiv{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+#CreateNewBtn{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #74a6d1;
+    margin:0 auto;
+    width:40%;
+    display:block;
+}
+
+.form-control{
+    margin:0 auto;
+    width:60%;
+}
+
+.form-group{
+    margin-bottom:13px !important;
+}
+
+.FirstRowList{
+    display:block;
+}
+
+#searchBox{
+    width: 60% !important;
+    margin:0 auto;
+}
+
+}

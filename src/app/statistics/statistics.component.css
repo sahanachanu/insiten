@@ -1,0 +1,48 @@
+#StatContainerColumn{
+    -webkit-box-shadow: 0 10px 6px -6px #ccc;
+    -moz-box-shadow: 0 10px 6px -6px #ccc;
+    box-shadow: 0 5px 100px -6px #ccc;
+    height:76vh;
+    margin-top:18px;
+    margin-bottom:18px;
+    border: 1px solid #ddd;
+    overflow-y:auto;
+}
+
+
+
+.DetailsContainerDiv{
+    background-color: #eeeeeead;
+    width: 100%;
+    margin-top:10px;
+}
+
+
+.PageTitle{
+    width:100%;
+    text-align:center;
+    height: 30px;
+    font-size:30px;
+}
+
+.SubText{
+    text-align:center;
+}
+
+#graphImg{
+    margin: 0 auto;
+    display:block;
+    width:300px;
+    height:300px;
+}
+
+@media (min-width: 1200px) {
+
+    #graphImg{
+        margin: 0 auto;
+        display:block;
+        width:700px;
+        height:400px;
+    }
+
+}
