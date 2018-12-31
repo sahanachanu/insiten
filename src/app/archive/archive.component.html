@@ -1,3 +1,4 @@
+<!--ARchive component routed to when archive is selected from navigation menu-->
 <div class="col-md-12" id="StatContainerColumn" >
     
         <div cass="row">
@@ -10,6 +11,7 @@
                 <div class="row">
                         <div class="col-md-12">
                             <div class="DetailsContainerDiv" >
+                                <!--Arcjived Companies Table container-->
                                     <div class="ArchiveTableContainer">
                                             <table class="table-contain">
                                                 <thead class="table-head">
@@ -21,7 +23,7 @@
                                                 <tbody class="table-body">
                                                     <tr *ngFor = "let comp of companies">
                                                         <td>{{comp}}</td>
-                                                        <td><a href="#" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a></td>
+                                                        <td><a href="../../../InsitenFiles/ArchiveFile.pdf" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

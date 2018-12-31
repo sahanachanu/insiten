@@ -1,10 +1,11 @@
-
+<!--This is the list component loaded on the left side of the page-->
     <div class="col-md-4">
             <div class="FirstRowList">
+                <!--Create Button to add new element to the list-->
                 <div class="CreateBtnDiv">
                         <button class="btn btn-group" id="CreateNewBtn" (click)="openDialog();">Create New</button>
                 </div>
-                    
+                    <!--Search bar to search elements in the list-->
                     <div class="row">
                         <div class="form-group has-search">
                             <input type="text" class="form-control"  [(ngModel)]="searchText" placeholder="Search" id="searchBox" >
@@ -12,7 +13,7 @@
                         </div>
                     </div>
             </div>
-            
+    <!--Container holding the list element displaying  its name and description-->
       <div class="ListViewContainer" >
           <a  class="list-group-item clearfix"
           *ngFor = "let ldata of listData  | grdFilter : {name:searchText}" (click)="onSelect(ldata)">
@@ -22,6 +23,7 @@
         
         </div>  
         </div>  
+        <!--Each list element when selected passes the element's details to List Details component-->
     <app-list-details *ngIf="clicked" [ldata]="selectedList" (childEvent)="recieved($event)"></app-list-details>
   
    

@@ -1,39 +1,54 @@
+<!--Dialog Component for creating new List item-->
 <h2 mat-dialog-title>Create New Target Company</h2>
 <mat-dialog-content>
   <div class="CreateCompForm">
+
+    <!--New Company Form-->
     <form #createForm ="ngForm" >
+      <!--Company Name-->
       <div class="form-group">
         <label>Company Name:</label>
         <input name = "companyName" type="text" required  class="form-control" [(ngModel)]="companyModel.name">
-     <!-- <small class="text-danger" [class.d-none]="name.invalid || name.touched">Company Name is required</small>-->
       </div>
+
+      <!--COmpany Description-->
       <div class="form-group">
           <label>Description:</label>
           <input name = "description" type="text" class="form-control" [(ngModel)]="companyModel.description">
         </div>
 
+        <!--Company Status-->
         <div class="form-group">
             <label>Status:</label>
             <select name = "status" class="form-control" [(ngModel)]="companyModel.status"><option *ngFor="let st of status">{{st}}</option></select>
           </div>
 
+          <!--Address Line 1-->
         <div ngModelGroup="address">
         <div class="form-group">
             <label>Address Line:</label>
             <input name = "address1" type="text" class="form-control" [(ngModel)]="companyModel.address1">
           </div>
+
+          <!--Address Line 2-->
           <div class="form-group">
               <label>Address Line2:</label>
               <input name = "address2" type="text" class="form-control" [(ngModel)]="companyModel.address2">
             </div>
+
+            <!--City-->
             <div class="form-group">
                 <label>City:</label>
                 <input name = "city" type="text" class="form-control" [(ngModel)]="companyModel.city">
               </div>
+
+              <!--State-->
               <div class="form-group">
                   <label>State:</label>
                   <input name = "state" type="text" class="form-control" [(ngModel)]="companyModel.state">
                 </div>
+
+                <!--Zip Code-->
                 <div class="form-group">
                     <label>Zip Code:</label>
                     <input name = "zip" type="text" class="form-control" [(ngModel)]="companyModel.zip">
@@ -48,4 +63,3 @@
    
   </div>
 </mat-dialog-content>
-<!--<strong>{{data}}</strong>-->

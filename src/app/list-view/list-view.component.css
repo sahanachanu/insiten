@@ -40,23 +40,7 @@
   .col-sm-6 {
     width: 88%;
 }
-  #imaginary_container{
-    margin-top: 24px;
-    width: 76%;
-    margin-left: 30%;
-}
-.stylish-input-group .input-group-addon{
-    background: white !important; 
-}
-.stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
+ 
 
 #CompanyNameList{
     color: #080808;
@@ -134,32 +118,32 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-#CreateNewBtn{
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #74a6d1;
-    margin:0 auto;
-    width:40%;
-    display:block;
-}
+    #CreateNewBtn{
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #74a6d1;
+        margin:0 auto;
+        width:40%;
+        display:block;
+    }
 
-.form-control{
-    margin:0 auto;
-    width:60%;
-}
+    .form-control{
+        margin:0 auto;
+        width:60%;
+    }
 
-.form-group{
-    margin-bottom:13px !important;
-}
+    .form-group{
+        margin-bottom:13px !important;
+    }
 
-.FirstRowList{
-    display:block;
-}
+    .FirstRowList{
+        display:block;
+    }
 
-#searchBox{
-    width: 60% !important;
-    margin:0 auto;
-}
+    #searchBox{
+        width: 60% !important;
+        margin:0 auto;
+    }
 
 }

@@ -26,7 +26,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 const appRoutes:Routes = [
   { path: 'list', component: ListViewComponent },
     { path: 'statistics', component: StatisticsComponent },
-    { path: 'archive', component: ArchiveComponent },
+    { path: 'archive/:name', component: ArchiveComponent },
     { path: '', redirectTo: '/list', pathMatch: 'full'}
 ];
 

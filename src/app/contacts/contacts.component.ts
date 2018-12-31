@@ -1,3 +1,4 @@
+//Importing all components
 import { Component, OnInit } from '@angular/core';
 import { ContactsService } from '../contacts.service';
 import { Contacts } from '../contacts';
@@ -9,6 +10,7 @@ import { Contacts } from '../contacts';
 })
 export class ContactsComponent implements OnInit {
 
+  //Declaring contacts array for CRUD operations
   public contacts = [];
   constructor(private contactsList: ContactsService) { }
 

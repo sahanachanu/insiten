@@ -46,8 +46,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"SC",
       "status":"Approved",
       "zip":"29526",
-      "DateOfOffer": "10/15/2018",
-      "DateOfClosure":"12/15/2018",
+      "DateOfOffer": "2018-10-15",
+      "DateOfClosure":"2018-12-15",
       "Shares":"230,897",
       "Price":"$1.10B",
       "Stake":"20%",
@@ -66,8 +66,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"CA",
       "status":"Approved",
       "zip":"32675",
-      "DateOfOffer": "08/22/2018",
-      "DateOfClosure":"01/22/2019",
+      "DateOfOffer": "2018-08-22",
+      "DateOfClosure":"2019-01-22",
       "Shares":"420,700",
       "Price":"625M",
       "Stake":"10%",
@@ -106,8 +106,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"CA",
       "status":"Pending Approval",
       "zip":"94043",
-      "DateOfOffer": "06/18/2018",
-      "DateOfClosure":"01/18/2019",
+      "DateOfOffer": "2018-06-18",
+      "DateOfClosure":"2019-01-18",
       "Shares":"30,897",
       "Price":"$1.3B",
       "Stake":"12%",
@@ -126,8 +126,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"CA",
       "status":"Researching",
       "zip":"94089",
-      "DateOfOffer": "12/20/2018",
-      "DateOfClosure":"02/25/2019",
+      "DateOfOffer": "2018-12-20",
+      "DateOfClosure":"2019-02-25",
       "Shares":"130,197",
       "Price":"$12.5B",
       "Stake":"30%",
@@ -146,8 +146,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"MA",
       "status":"Declined",
       "zip":"02142",
-      "DateOfOffer": "07/20/2018",
-      "DateOfClosure":"03/22/2019",
+      "DateOfOffer": "2018-07-20",
+      "DateOfClosure":"2019-03-22",
       "Shares":"430,237",
       "Price":"$700M",
       "Stake":"8%",
@@ -166,8 +166,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"NY",
       "status":"Researching",
       "zip":"32826",
-      "DateOfOffer": "12/20/2018",
-      "DateOfClosure":"05/22/2019",
+      "DateOfOffer": "2018-12-20",
+      "DateOfClosure":"2019-05-22",
       "Shares":"530,437",
       "Price":"$3.1B",
       "Stake":"20%",
@@ -186,8 +186,8 @@ export class InMemoryDataService implements InMemoryDbService {
       "state":"CA",
       "status":"Approved",
       "zip":"94066",
-      "DateOfOffer": "02/16/2018",
-      "DateOfClosure":"07/18/2018",
+      "DateOfOffer": "2018-02-16",
+      "DateOfClosure":"2018-07-18",
       "Shares":"710,490",
       "Price":"$1.65B",
       "Stake":"12%",
@@ -200,14 +200,13 @@ export class InMemoryDataService implements InMemoryDbService {
 
   ];
     return {companies, contacts};
-   // return {contacts};
   }
 
-  // Overrides the genId method to ensure that a hero always has an id.
-  // If the heroes array is empty,
+  // Overrides the genId method to ensure that a company always has an id.
+  // If the companies array is empty,
   // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
+  // if the companies array is not empty, the method below returns the highest
+  // company id + 1.
   genId(contacts: Contacts[]): number {
     return contacts.length > 0 ? Math.max(...contacts.map(contact => contact.id)) + 1 : 11;
   }

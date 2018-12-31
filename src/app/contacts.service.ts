@@ -20,9 +20,6 @@ export class ContactsService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  //  getContacts():Observable<Contacts[]>{
-    //  return this.http.get<Contacts[]>(this._url);
-    //}
   
     getContacts (): Observable<Contacts[]> {
       return this.http.get<Contacts[]>(this._urlc)
@@ -33,7 +30,7 @@ export class ContactsService {
     }
   //////// Save methods //////////
 
-  /** POST: add a new hero to the server */
+  /** POST: add a new company to the server */
   addContact (contact: Contacts): Observable<Contacts> {
     return this.http.post<Contacts>(this._urlc, contact, httpOptions).pipe(
       tap((contact: Contacts) => this.log(`added contact w/ id=${contact.id}`)),
@@ -41,7 +38,7 @@ export class ContactsService {
     );
   }
 
-  /** DELETE: delete the hero from the server */
+  /** DELETE: delete the company from the server */
 deleteContact (contact: Contacts | number): Observable<Contacts> {
   const id = typeof contact === 'number' ? contact : contact.id;
   const url = `${this._urlc}/${id}`;
@@ -74,7 +71,7 @@ deleteContact (contact: Contacts | number): Observable<Contacts> {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a Company Sevice message with the MessageService */
   private log(message: string) {
     this.messageService.add(`ContactsService: ${message}`);
   }

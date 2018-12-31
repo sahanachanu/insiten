@@ -38,7 +38,7 @@
 #EditBtn{
     float:right;
     margin-right: 10px;
-    width: 25%;
+    width: 65px;
     background-color: #74a6d1;
     color: black;
     font-weight: bold;
@@ -49,7 +49,7 @@
 .StatusDiv{
     border: 1px solid black;
     margin-left: 16px;
-    width: 53%;
+    width: 180px;
     margin-top: 15px;
     display: inline-flex;
     height: 33px;
@@ -57,9 +57,8 @@
 
 .StatusDivEdit{
     margin-left: 16px;
-    width: 55%;
+    width: 70%;
     margin-top: 15px;
-    display: inline-flex
 }
 
 #StatusLabel{
@@ -75,11 +74,13 @@
 }
 #StatusLabelEdit{
     width: 115px;
+    margin-top:15px;
 }
 #StatusValueEdit{
     font-weight: bold;
     float: left;
-    
+    margin-bottom:15px;
+    width: 70% !important;
 }
 
 
@@ -116,11 +117,18 @@
 }
 
 .InfoLabelE{
-    width: 100px;
+    width: 200px;
+}
+.InfoLabelEF{
+    width: 200px;
 }
 .InfoLabelDataE {
   float: left;
   margin-left:50px;
+}
+
+.form-control{
+    width:60% !important;
 }
 
 #SaveBtn{
@@ -176,6 +184,43 @@
     margin-top:13px;
 }
 
+@media (min-width: 478px) {
+    .GeneralInfoEdit{
+        margin-left: 16px;
+        margin-top: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .GeneralInfoEdit{
+        margin-left: 16px;
+        margin-top: 4px;
+    }
+    .StatusDivEdit{
+        margin-left: 16px;
+        width: 58%;
+        margin-top: 15px;
+        display:inline-flex;
+    }
+
+    #StatusLabelEdit{
+        width: 60px;
+        margin-top: 8px;
+    }
+
+    #StatusValueEdit{
+        margin-left: 157px;
+    }
+
+    #SaveBtn{
+        width: 13%;
+    }
+    
+    #CancelBtn{
+        float:right;
+        width: 14%;
+    }
+    
+}
 @media (min-width: 1200px) {
 .DetailsContainerDiv{
     background-color: #eeeeeead;
@@ -193,13 +238,14 @@
 
 .StatusDivEdit{
     margin-left: 16px;
-    width: 39%;
+    width: 58%;
     margin-top: 15px;
     display:inline-flex;
 }
 
 #StatusLabel{
     font-size: 18px;
+    
 }
 #StatusValue{
     font-size: 17px;
@@ -210,13 +256,16 @@
 }
 #StatusLabelEdit{
     font-size: 18px;
-    width: 36%;
+    width: 49%;
+    margin-top:0px;
 }
 #StatusValueEdit{
     font-size: 17px;
     font-weight: bold;
     float: left;
-    
+    width:50% !important;
+    margin-bottom:0px;
+    margin-left:0px;
 }
 
 #EditBtn{
@@ -230,6 +279,10 @@
     margin-top:15px;
 }
 
+
+.form-control{
+    width:30% !important;
+}
 #ArchBtn{
     margin-left:0px;
 }
@@ -246,5 +299,11 @@
 #archiveInfo{
     margin-left: 10px;
     font-size:16px;
+}
+
+.GeneralInfoEdit{
+    margin-left:16px;
+    margin-top:25px;
+    
 }
 }

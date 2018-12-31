@@ -1,3 +1,4 @@
+/*Search filter for the list items */
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

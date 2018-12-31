@@ -1,181 +1,224 @@
-
+<!--List Details component-->
 <div class="col-md-8" id="DetailsContainerColumn" >
-    
+    <!--Div displaying the Company Name-->
         <div cass="row">
             <div class="col-md-12" id="CompanyNameDetails">
                     <h1 class="CompanyNameDetails">{{ldata.name}}</h1>
-            </div>
-            
+            </div>   
         </div>
+        <!--Conatiner holding all company information-->
         <div class="InfoDisplayContainer">
                 <div class="row">
                         <div class="col-md-12">
                             <div class="DetailsContainerDiv" >
+                            <!--Container holding the status and Edit button-->
                             <div class="FirstRow" *ngIf='nonEdit'>
                                     <div class="StatusDiv"><span id="StatusLabel">Status:</span><span id="StatusValue">{{ldata.status}}</span></div>
                                     <button class="btn btn-group" id="EditBtn" (click)='ShowEditForm();'>Edit</button>
                             </div>
-
-                            <div class="FirstRowEdit" *ngIf='edit'>
-                                    <div class="StatusDivEdit">
-                                        <label id="StatusLabelEdit">Status:</label>
-                                        <select id="StatusValueEdit" id="status" value="{{ldata.status}}"><option *ngFor="let st of status">{{st}}</option></select>
-                                    </div>
-                                    <button class="btn btn-group" id="SaveBtn" (click)="SaveChanges();">Save</button>
-                                    <button class="btn btn-group" id="CancelBtn" (click)='CancelEdit();'>Cancel</button>
-                            </div>
-
+                                <!--Display Container for all the company information in non edit mode-->
                                 <div class="GeneralInfo" *ngIf='nonEdit' id="GeneralInfo">
                                         
+                                <!--Description-->
                                 <div class="DataBlock">
                                     <div class="InfoLabel">Description:</div>
                                     <div class="InfoData">{{ ldata.description }}</div>
                                 </div>
 
+                                <!--Address Line 1-->
                                 <div class="DataBlock">
                                     <div class="InfoLabel">Address Line:</div>
                                     <div class="InfoData">{{ ldata.address1 }}</div>
                                 </div>
+
+                                <!--Address Line 2-->
                                 <div class="DataBlock" *ngIf="address2">
                                     <div class="InfoLabel">Address Line 2:</div>
                                     <div class="InfoData">{{ ldata.address2 }}</div>
                                 </div>
+
+                                <!--City-->
                                 <div class="DataBlock">
                                     <div class="InfoLabel">City:</div>
                                     <div class="InfoData">{{ ldata.city }}</div>
                                 </div>
+
+                                <!--State-->
                                 <div class="DataBlock">
                                     <div class="InfoLabel">State:</div>
                                     <div class="InfoData">{{ ldata.state }}</div>
                                 </div>
 
+                                <!--Zip Code-->
                                 <div class="DataBlock">
                                     <div class="InfoLabel">Zip Code:</div>
                                     <div class="InfoData">{{ ldata.zip }}</div>
                                 </div>
                                 
+                                <!--Container to hold Financial Performance Data-->
                                 <div class="FinancialInfoContainer">
                                         <div><span class="BlockTitle">Financial Performance</span>
                                                 <a href="../../../InsitenFiles/{{ ldata.file }}" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a>
                                         </div>
                                         
-
+                                        <!--Date of Offer in format "mm/dd/yyy"-->
                                         <div class="DataBlock">
                                                 <div class="InfoLabel">Date of Offer:</div>
-                                                <div class="InfoData">{{ ldata.DateOfOffer }}</div>
+                                                <div class="InfoData">{{ ldata.DateOfOffer|date: 'MM/dd/yyyy' }}</div>
                                             </div>
-            
+                                        
+                                            <!--Date of Closure in format "mm/dd/yyy"-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Date of Closure:</div>
-                                                <div class="InfoData">{{ ldata.DateOfClosure }}</div>
+                                                <div class="InfoData">{{ ldata.DateOfClosure |date: 'MM/dd/yyyy'  }}</div>
                                             </div>
-            
+                                            
+                                            <!--Shares-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Shares:</div>
                                                 <div class="InfoData">{{ ldata.Shares }}</div>
                                             </div>
-            
+                                            
+                                            <!--Price Quoted in $-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Price:</div>
                                                 <div class="InfoData">{{ ldata.Price }}</div>
                                             </div>
-            
+                                            
+                                            <!--Percentage of Stake Acquired-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Percentage Stake Acquired:</div>
                                                 <div class="InfoData">{{ ldata.Stake }}</div>
                                             </div>
-            
+                                            
+                                            <!--Percentage Stake after acquiring-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Percentage Stake after Acquisition:</div>
                                                 <div class="InfoData">{{ ldata.StakeAfter }}</div>
                                             </div>
-            
+                                            
+                                            <!--Market Price in $-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Market Price</div>
                                                 <div class="InfoData">{{ ldata.MarketPrice }}</div>
                                             </div>
-            
+                                            
+                                            <!--Acquisition Premium in $-->
                                             <div class="DataBlock">
                                                 <div class="InfoLabel">Aquisition Premium</div>
                                                 <div class="InfoData">{{ ldata.AcqPremium }}</div>
                                             </div>
                                     </div>
-                                
+                                      
                             </div>
 
+                            <!--Edit form for the Comapny Information
+                            - Displayed only when edit button is clicked
+                            -->
+                            <form #userForm="ngForm">
+                               
+                            
+                            <div class="FirstRowEdit" *ngIf='edit'>
+                                    <button class="btn btn-group" id="SaveBtn" (click)="SaveForm(userForm.value);" type="submit">Save</button>
+                                    <button class="btn btn-group" id="CancelBtn" (click)='CancelEdit();'>Cancel</button>
+                                <div class="StatusDivEdit form-inline">
+                                     <label id="StatusLabelEdit">Status:</label>
+                                    <select id="StatusValueEdit"  value="{{ldata.status}}" class="form-control" name= "status" [(ngModel)] = "userModel.status"><option *ngFor="let st of status">{{st}}</option></select>
+                                </div>
+                                
+                            </div>
                             <div class="GeneralInfoEdit" *ngIf='edit' id="GeneralInfoEdit">
-                                    <div class="DataBlock">
+                                <input type="hidden" value="{{ldata.id}}" name="id" ngModel>
+                                <!--Description-->
+                                    <div class="form-inline">
                                             <label class="InfoLabelE">Description:</label>
-                                            <input class="InfoDataE"  type='text' value="{{ldata.description}}">
+                                            <input class="form-control InfoDataE"  type='text' value="{{ldata.description}}" name="description" [(ngModel)] = "userModel.description">
                                         </div>
-                                            <div class="DataBlock">
+                                        <!--Address Line 1-->
+                                            <div class="form-inline">
                                                 <label class="InfoLabelE">Address Line:</label>
-                                                <input class="InfoDataE"  id="address1" #address1 type='text' value="{{ldata.address1}}">
+                                                <input class="form-control InfoDataE"  id="address1" #address1 type='text' value="{{ldata.address1}}" name="address1" [(ngModel)] = "userModel.address1">
                                             </div>
-                                            <div class="DataBlock" *ngIf="address2">
+                                            <!--Address Line 2-->
+                                            <div class="form-inline" *ngIf="address2">
                                                 <label class="InfoLabelE" >Address Line 2:</label>
-                                                <input class="InfoDataE"  id="address2" type='text' value="{{ldata.address2}}">
-                                            </div>
-                                            <div class="DataBlock">
-                                                <label class="InfoLabelE">City:</label>
-                                                <input class="InfoDataE" id="city" type='text' value="{{ldata.city}}">
-                                            </div>
-                                            <div class="DataBlock">
-                                                <label class="InfoLabelE">State:</label>
-                                                <input class="InfoDataE" id="state" type='text' value="{{ldata.state}}" >
+                                                <input class="form-control InfoDataE"  id="address2" type='text' value="{{ldata.address2}}" name="address2" [(ngModel)] = "userModel.address2">
                                             </div>
 
-                                            <div class="DataBlock">
+                                            <!--City-->
+                                            <div class="form-inline">
+                                                <label class="InfoLabelE">City:</label>
+                                                <input class="form-control InfoDataE" id="city" type='text' value="{{ldata.city}}" name="city" [(ngModel)] = "userModel.city">
+                                            </div>
+                                            <!--State-->
+                                            <div class="form-inline">
+                                                <label class="InfoLabelE">State:</label>
+                                                <input class="form-control InfoDataE" id="state" type='text' value="{{ldata.state}}" name="state" [(ngModel)] = "userModel.state">
+                                            </div>
+                                            
+                                            <!--Zip Code-->
+                                            <div class="form-inline">
                                                     <label class="InfoLabelE">Zip Code:</label>
-                                                    <input class="InfoDataE"  type='text' value="{{ldata.zip}}">
+                                                    <input class="form-control InfoDataE"  type='text' value="{{ldata.zip}}" name="zip" [(ngModel)] = "userModel.zip">
                                                 </div>
                                             <div class="FinancialInfoContainer">
                                                     <div><span class="BlockTitle">Financial Performance</span>
                                                             <a href="#" class="button" download><span><img src="../../../images/pdf.png" width="40px" height="35px"></span>Download</a>
-                                            <div class="DataBlock">
-                                                    <label class="InfoLabel">Date of Offer: </label>
-                                                    <input class="InfoDataE" type='date' value="{{ ldata.DateOfOffer }}">
+                                              <!--Date of Offer in format "mm/dd/yyy"-->
+                                            <div class="form-inline">
+                                                    <label class="InfoLabelEF">Date of Offer: </label>
+                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfOffer }}" name="DateOfOffer" [(ngModel)] = "userModel.DateOfOffer">
+                                                </div>
+
+                                              <!--Date of Closure in format "mm/dd/yyy"-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Date of Closure: </label>
+                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfClosure }}" name="DateOfClosure" [(ngModel)] = "userModel.DateOfClosure">
+                                                </div>
+                                                
+                                                <!--Shares-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Shares: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.Shares }}" name="Shares" [(ngModel)] = "userModel.Shares">
                                                 </div>
                 
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Date of Closure: </label>
-                                                    <input class="InfoDataE" type='date' value="{{ ldata.DateOfClosure }}">
+                                                <!--Price in $-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Price: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.Price}}" name="Price" [(ngModel)] = "Price">
+                                                </div>
+                                                
+                                                <!--Percentage Stake-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Percentage Stake Acquired: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.Stake }}" name="Stake" [(ngModel)] = "userModel.Stake">
+                                                </div>
+                                                
+                                                <!--Percentage Stake after Acquiring-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Percentage Stake after Acquisition: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.StakeAfter }}" name="StakeAfter" [(ngModel)] = "userModel.StakeAfter">
                                                 </div>
                 
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Shares: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.Shares }}">
+                                                <!--Market price-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Market Price: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.MarketPrice }}" name="MarketPrice" [(ngModel)] = "userModel.MarketPrice">
                                                 </div>
                 
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Price: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.Price }}">
-                                                </div>
-                
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Percentage Stake Acquired: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.Stake }}">
-                                                </div>
-                
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Percentage Stake after Acquisition: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.StakeAfter }}">
-                                                </div>
-                
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Market Price: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.MarketPrice }}">
-                                                </div>
-                
-                                                <div class="DataBlock">
-                                                    <label class="InfoLabel">Aquisition Premium: </label>
-                                                    <input class="InfoDataE" type='text' value="{{ ldata.AcqPremium }}">
+                                                <!--Acquisition premium-->
+                                                <div class="form-inline">
+                                                    <label class="InfoLabelEF">Aquisition Premium: </label>
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.AcqPremium }}" name="AcqPremium" [(ngModel)] = "userModel.AcqPremium">
                                                 </div>
                                             </div>
                             </div>
                             </div>
-                            
+                            </form>
+                            <!--Contacts Component is called-->
                             <app-contacts></app-contacts>
+
+                            <!--Archive and Delete Section-->
                             <div class="ActionContainer">
                                     <div class="ArchiveCompContainer">
                                             <div class="form-check mb-3">
