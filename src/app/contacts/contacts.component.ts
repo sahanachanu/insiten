@@ -28,6 +28,12 @@ export class ContactsComponent implements OnInit {
   }
   
   AddContacts(name,phone): void {
+    if(name == "")
+    alert("Name field cannot be empty");
+
+    if(phone == "")
+    alert("Phone field cannot be empty");
+
     name = name.trim();
     if (!name) { return; }
     phone = phone.trim();

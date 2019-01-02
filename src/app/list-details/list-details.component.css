@@ -160,7 +160,6 @@
 }
 
 #archiveInfo{
-    margin-left: 10px;
     font-size:12px;
 }
 .ActionContainer{
@@ -172,17 +171,12 @@
     margin-bottom:20px;
 }
 
-#ArchBtn{
-    margin-left:22px;
-}
 
-#DelBtn{
-    margin-left:22px;
-}
 
 .FinancialInfoContainer{
     margin-top:13px;
 }
+
 
 @media (min-width: 478px) {
     .GeneralInfoEdit{
@@ -298,6 +292,7 @@
 
 #archiveInfo{
     font-size:16px;
+    margin-left:0px;
 }
 
 .GeneralInfoEdit{

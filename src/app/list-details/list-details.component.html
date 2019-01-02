@@ -125,6 +125,7 @@
                                      <label id="StatusLabelEdit">Status:</label>
                                     <select id="StatusValueEdit"  value="{{ldata.status}}" class="form-control" name= "status" [(ngModel)] = "userModel.status"><option *ngFor="let st of status">{{st}}</option></select>
                                 </div>
+
                                 
                             </div>
                             <div class="GeneralInfoEdit" *ngIf='edit' id="GeneralInfoEdit">
@@ -137,29 +138,29 @@
                                         <!--Address Line 1-->
                                             <div class="form-inline">
                                                 <label class="InfoLabelE">Address Line:</label>
-                                                <input class="form-control InfoDataE"  id="address1" #address1 type='text' value="{{ldata.address1}}" name="address1" [(ngModel)] = "userModel.address1">
+                                                <input class="form-control InfoDataE"  id="address1" #address1 type='text' value="{{ldata.address1}}" name="address1" [(ngModel)] = "userModel.address1" >
                                             </div>
                                             <!--Address Line 2-->
                                             <div class="form-inline" *ngIf="address2">
                                                 <label class="InfoLabelE" >Address Line 2:</label>
-                                                <input class="form-control InfoDataE"  id="address2" type='text' value="{{ldata.address2}}" name="address2" [(ngModel)] = "userModel.address2">
+                                                <input class="form-control InfoDataE"  id="address2" type='text' value="{{ldata.address2}}" name="address2" [(ngModel)] = "userModel.address2" >
                                             </div>
 
                                             <!--City-->
                                             <div class="form-inline">
                                                 <label class="InfoLabelE">City:</label>
-                                                <input class="form-control InfoDataE" id="city" type='text' value="{{ldata.city}}" name="city" [(ngModel)] = "userModel.city">
+                                                <input class="form-control InfoDataE" id="city" type='text' value="{{ldata.city}}" name="city" [(ngModel)] = "userModel.city" >
                                             </div>
                                             <!--State-->
                                             <div class="form-inline">
                                                 <label class="InfoLabelE">State:</label>
-                                                <input class="form-control InfoDataE" id="state" type='text' value="{{ldata.state}}" name="state" [(ngModel)] = "userModel.state">
+                                                <input class="form-control InfoDataE" id="state" type='text' value="{{ldata.state}}" name="state" [(ngModel)] = "userModel.state" >
                                             </div>
                                             
                                             <!--Zip Code-->
                                             <div class="form-inline">
                                                     <label class="InfoLabelE">Zip Code:</label>
-                                                    <input class="form-control InfoDataE"  type='text' value="{{ldata.zip}}" name="zip" [(ngModel)] = "userModel.zip">
+                                                    <input class="form-control InfoDataE"  type='text' value="{{ldata.zip}}" name="zip" [(ngModel)] = "userModel.zip" >
                                                 </div>
                                             <div class="FinancialInfoContainer">
                                                     <div><span class="BlockTitle">Financial Performance</span>
@@ -167,19 +168,19 @@
                                               <!--Date of Offer in format "mm/dd/yyy"-->
                                             <div class="form-inline">
                                                     <label class="InfoLabelEF">Date of Offer: </label>
-                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfOffer }}" name="DateOfOffer" [(ngModel)] = "userModel.DateOfOffer">
+                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfOffer }}" name="DateOfOffer" [(ngModel)] = "userModel.DateOfOffer" >
                                                 </div>
 
                                               <!--Date of Closure in format "mm/dd/yyy"-->
                                                 <div class="form-inline">
                                                     <label class="InfoLabelEF">Date of Closure: </label>
-                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfClosure }}" name="DateOfClosure" [(ngModel)] = "userModel.DateOfClosure">
+                                                    <input class="form-control InfoDataE" type='date' value="{{ ldata.DateOfClosure }}" name="DateOfClosure" [(ngModel)] = "userModel.DateOfClosure" >
                                                 </div>
                                                 
                                                 <!--Shares-->
                                                 <div class="form-inline">
                                                     <label class="InfoLabelEF">Shares: </label>
-                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.Shares }}" name="Shares" [(ngModel)] = "userModel.Shares">
+                                                    <input class="form-control InfoDataE" type='text' value="{{ ldata.Shares }}" name="Shares" [(ngModel)] = "userModel.Shares" >
                                                 </div>
                 
                                                 <!--Price in $-->
